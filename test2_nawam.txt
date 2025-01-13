@@ -1,0 +1,10 @@
+var a : integer;
+var b : integer;
+var c : integer;
+
+func main() -> void {
+    a = 2 + 3 * 4;    // Expected: 2 + (3 * 4) = 14
+    b = (2 + 3) * 4;  // Expected: (2 + 3) * 4 = 20
+    c = a + b;
+    write(c);
+}

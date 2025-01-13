@@ -1,0 +1,6 @@
+struct java {
+    var y : integer;
+};
+var obj : java;
+var x : integer;
+ 

@@ -1,0 +1,26 @@
+# Build Commands
+
+# Generate Bison files
+bison -d nawam.y
+
+# Generate Flex files
+flex nawam.l
+
+# Compile the source files and link them into the executable 'nawam'
+gcc -o nawam lex.yy.c nawam.tab.c nawam_graph.c nawam_codegen.c
+
+# Run the compiler with test files and generate AST visualizations
+nawam test1_nawam.txt
+dot -Tpng ast.dot -o test1_nawam.png
+
+nawam test2_nawam.txt
+dot -Tpng ast.dot -o test2_nawam.png
+
+nawam test3_nawam.txt
+dot -Tpng ast.dot -o test3_nawam.png
+
+nawam test4_nawam.txt
+dot -Tpng ast.dot -o test4_nawam.png
+
+
+nawam check.txt // error should occur 

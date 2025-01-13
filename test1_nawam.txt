@@ -1,0 +1,6 @@
+var x: integer;
+
+func main() -> void {
+    x = 10;
+    return;
+}
